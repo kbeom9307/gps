@@ -20,6 +20,10 @@ AGENT = {
     'smooth_noise_renormalize': True,
 }
 
+AGENT_PEPPER = {'trial_timeout': 4 }
+
+AGENT_UR_ROS = {'trial_timeout': 4 }
+
 
 try:
     import rospkg

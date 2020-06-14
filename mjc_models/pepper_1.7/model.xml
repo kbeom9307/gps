@@ -1,0 +1,501 @@
+<mujoco model="JulietteY20MP">
+    <compiler angle="radian" meshdir="meshes_mujoco/" />
+    <size njmax="500" nconmax="100" />
+    <asset>
+        <mesh name="Torso" file="Torso.stl" scale="0.1 0.1 0.1" />
+        <mesh name="Torso_0.10" file="Torso_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="HeadYaw" file="HeadYaw.stl" scale="0.1 0.1 0.1" />
+        <mesh name="HeadYaw_0.10" file="HeadYaw_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="HeadPitch" file="HeadPitch.stl" scale="0.1 0.1 0.1" />
+        <mesh name="HeadPitch_0.10" file="HeadPitch_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="HipRoll" file="HipRoll.stl" scale="0.1 0.1 0.1" />
+        <mesh name="HipRoll_0.10" file="HipRoll_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="HipPitch" file="HipPitch.stl" scale="0.1 0.1 0.1" />
+        <mesh name="HipPitch_0.10" file="HipPitch_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="KneePitch" file="KneePitch.stl" scale="0.1 0.1 0.1" />
+        <mesh name="KneePitch_0.10" file="KneePitch_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="WheelFL" file="WheelFL.stl" scale="0.1 0.1 0.1" />
+        <mesh name="WheelFL_0.10" file="WheelFL_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="WheelB" file="WheelB.stl" scale="0.1 0.1 0.1" />
+        <mesh name="WheelB_0.10" file="WheelB_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="WheelFR" file="WheelFR.stl" scale="0.1 0.1 0.1" />
+        <mesh name="WheelFR_0.10" file="WheelFR_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LShoulderPitch" file="LShoulderPitch.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LShoulderPitch_0.10" file="LShoulderPitch_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LShoulderRoll" file="LShoulderRoll.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LShoulderRoll_0.10" file="LShoulderRoll_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LElbowYaw" file="LElbowYaw.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LElbowYaw_0.10" file="LElbowYaw_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LElbowRoll" file="LElbowRoll.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LElbowRoll_0.10" file="LElbowRoll_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LWristYaw" file="LWristYaw.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LWristYaw_0.10" file="LWristYaw_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LFinger21" file="LFinger21.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LFinger21_0.10" file="LFinger21_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LFinger22" file="LFinger22.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LFinger22_0.10" file="LFinger22_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LFinger23" file="LFinger23.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LFinger23_0.10" file="LFinger23_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LFinger11" file="LFinger11.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LFinger11_0.10" file="LFinger11_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LFinger12" file="LFinger12.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LFinger12_0.10" file="LFinger12_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LFinger13" file="LFinger13.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LFinger13_0.10" file="LFinger13_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LFinger41" file="LFinger41.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LFinger41_0.10" file="LFinger41_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LFinger42" file="LFinger42.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LFinger42_0.10" file="LFinger42_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LFinger43" file="LFinger43.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LFinger43_0.10" file="LFinger43_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LFinger31" file="LFinger31.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LFinger31_0.10" file="LFinger31_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LFinger32" file="LFinger32.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LFinger32_0.10" file="LFinger32_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LFinger33" file="LFinger33.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LFinger33_0.10" file="LFinger33_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LThumb1" file="LThumb1.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LThumb1_0.10" file="LThumb1_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LThumb2" file="LThumb2.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LThumb2_0.10" file="LThumb2_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RShoulderPitch" file="RShoulderPitch.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RShoulderPitch_0.10" file="RShoulderPitch_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RShoulderRoll" file="RShoulderRoll.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RShoulderRoll_0.10" file="RShoulderRoll_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RElbowYaw" file="RElbowYaw.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RElbowYaw_0.10" file="RElbowYaw_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RElbowRoll" file="RElbowRoll.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RElbowRoll_0.10" file="RElbowRoll_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RWristYaw" file="RWristYaw.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RWristYaw_0.10" file="RWristYaw_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RFinger41" file="RFinger41.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RFinger41_0.10" file="RFinger41_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RFinger42" file="RFinger42.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RFinger42_0.10" file="RFinger42_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RFinger43" file="RFinger43.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RFinger43_0.10" file="RFinger43_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RFinger31" file="RFinger31.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RFinger31_0.10" file="RFinger31_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RFinger32" file="RFinger32.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RFinger32_0.10" file="RFinger32_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RFinger33" file="RFinger33.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RFinger33_0.10" file="RFinger33_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RFinger21" file="RFinger21.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RFinger21_0.10" file="RFinger21_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RFinger22" file="RFinger22.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RFinger22_0.10" file="RFinger22_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RFinger23" file="RFinger23.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RFinger23_0.10" file="RFinger23_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RFinger11" file="RFinger11.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RFinger11_0.10" file="RFinger11_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RFinger12" file="RFinger12.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RFinger12_0.10" file="RFinger12_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RFinger13" file="RFinger13.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RFinger13_0.10" file="RFinger13_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RThumb1" file="RThumb1.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RThumb1_0.10" file="RThumb1_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RThumb2" file="RThumb2.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RThumb2_0.10" file="RThumb2_0.10.stl" scale="0.1 0.1 0.1" />
+    </asset>
+    <worldbody>
+        <body name="base_link" pos="0 0 0">
+            <inertial pos="0 0 0" mass="0" diaginertia="0 0 0" />
+            <body name="torso" pos="0 0 0">
+                <inertial pos="0.00322 0 -0.01029" quat="0.992867 -0.00576461 -0.118623 -0.0105365" mass="3.99533" diaginertia="0.0464867 0.0432726 0.0246751" />
+                <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="Torso" />
+                <geom type="mesh" mesh="Torso_0.10" />
+                <body name="Neck" pos="-0.038 0 0.1699">
+                    <inertial pos="-0.00207 0 -0.02636" quat="0.704768 0.05316 0.0478511 0.705823" mass="0.27391" diaginertia="0.000493914 0.000346215 0.000212522" />
+                    <joint name="HeadYaw" pos="0 0 0" axis="0 0 1" limited="true" range="-2.08567 2.08567" />
+                    <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="HeadYaw" />
+                    <geom type="mesh" mesh="HeadYaw_0.10" />
+                    <body name="Head" pos="0 0 0">
+                        <inertial pos="0.00312 0 0.11152" quat="0.982446 0.000662891 -0.186542 0.00082431" mass="1.51893" diaginertia="0.00602139 0.0059054 0.00565444" />
+                        <joint name="HeadPitch" pos="0 0 0" axis="0 1 0" limited="true" range="-0.706858 0.637045" />
+                        <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="HeadPitch" />
+                        <geom type="mesh" mesh="HeadPitch_0.10" />
+                        <body name="RSpeaker_frame" pos="0 0 0">
+                            <inertial pos="0 0 0" mass="0" diaginertia="0 0 0" />
+                        </body>
+                        <body name="LSpeaker_frame" pos="0 0 0">
+                            <inertial pos="0 0 0" mass="0" diaginertia="0 0 0" />
+                        </body>
+                        <body name="CameraTop_frame" pos="0.08601 0 0.16284">
+                            <inertial pos="0.08601 0 0.16284" mass="0" diaginertia="0 0 0" />
+                            <body name="CameraTop_optical_frame" pos="0 0 0" quat="0.5 -0.5 0.5 -0.5">
+                                <inertial pos="0 0 0" quat="0.5 -0.5 0.5 -0.5" mass="0" diaginertia="0 0 0" />
+                            </body>
+                        </body>
+                        <body name="CameraDepth_frame" pos="0.05138 0.039 0.1194">
+                            <inertial pos="0.05138 0.039 0.1194" mass="0" diaginertia="0 0 0" />
+                            <body name="CameraDepth_optical_frame" pos="0 0 0" quat="0.5 -0.5 0.5 -0.5">
+                                <inertial pos="0 0 0" quat="0.5 -0.5 0.5 -0.5" mass="0" diaginertia="0 0 0" />
+                            </body>
+                        </body>
+                        <body name="HeadTouchFront_frame" pos="0.028175 0 0.21267" quat="0.994522 0 0.104529 0">
+                            <inertial pos="0.028175 0 0.21267" quat="0.994522 0 0.104529 0" mass="0" diaginertia="0 0 0" />
+                        </body>
+                        <body name="CameraBottom_frame" pos="0.09262 0 0.06177" quat="0.939693 0 0.34202 0">
+                            <inertial pos="0.09262 0 0.06177" quat="0.939693 0 0.34202 0" mass="0" diaginertia="0 0 0" />
+                            <body name="CameraBottom_optical_frame" pos="0 0 0" quat="0.5 -0.5 0.5 -0.5">
+                                <inertial pos="0 0 0" quat="0.5 -0.5 0.5 -0.5" mass="0" diaginertia="0 0 0" />
+                            </body>
+                        </body>
+                        <body name="HeadTouchRear_frame" pos="-0.03376 0 0.21052" quat="0.987688 0 -0.156434 0">
+                            <inertial pos="-0.03376 0 0.21052" quat="0.987688 0 -0.156434 0" mass="0" diaginertia="0 0 0" />
+                        </body>
+                        <body name="HeadTouchMiddle_frame" pos="0.0041 0 0.2159" quat="0.999848 0 -0.0174524 0">
+                            <inertial pos="0.0041 0 0.2159" quat="0.999848 0 -0.0174524 0" mass="0" diaginertia="0 0 0" />
+                        </body>
+                    </body>
+                </body>
+                <body name="Hip" pos="2e-05 0 -0.139">
+                    <inertial pos="0.00032 0 -0.06039" quat="0.705334 0.0422371 -0.0136626 0.707484" mass="1.02338" diaginertia="0.00642235 0.00502525 0.00439715" />
+                    <joint name="HipRoll" pos="0 0 0" axis="1 0 0" limited="true" range="-0.514872 0.514872" />
+                    <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="HipRoll" />
+                    <geom type="mesh" mesh="HipRoll_0.10" />
+                    <body name="Pelvis" pos="0 0 -0.079">
+                        <inertial pos="0.00237 0 -0.09654" quat="0.999981 -0.00262662 -0.00558246 -0.000130362" mass="2.45917" diaginertia="0.0343535 0.0303126 0.0143742" />
+                        <joint name="HipPitch" pos="0 0 0" axis="0 1 0" limited="true" range="-1.03847 1.03847" />
+                        <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="HipPitch" />
+                        <geom type="mesh" mesh="HipPitch_0.10" />
+                        <body name="Tibia" pos="0 0 -0.268">
+                            <inertial pos="0.00220451 0 -0.185729" quat="0.999446 0.000674774 -0.0115096 -0.0312135" mass="11.6015" diaginertia="0.129265 0.122814 0.108157" />
+                            <joint name="KneePitch" pos="0 0 0" axis="0 1 0" limited="true" range="-0.514872 0.514872" />
+                            <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="KneePitch" />
+                            <geom type="mesh" mesh="KneePitch_0.10" />
+                            <body name="base_footprint" pos="0 0 -0.334">
+                                <inertial pos="0 0 -0.334" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="SonarBack_frame" pos="-0.0718 0 -0.0534" quat="1.31858e-06 -0.104528 -1.29649e-07 -0.994522">
+                                <inertial pos="-0.0718 0 -0.0534" quat="1.31858e-06 -0.104528 -1.29649e-07 -0.994522" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="VerticalLeftLaser_frame" pos="0.0562 0 -0.0692" quat="0.984808 0 0.173648 0">
+                                <inertial pos="0.0562 0 -0.0692" quat="0.984808 0 0.173648 0" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="SurroundingFrontLaser_device_frame" pos="0.0562 0 -0.0692" quat="0.984808 0 0.173648 0">
+                                <inertial pos="0.0562 0 -0.0692" quat="0.984808 0 0.173648 0" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="BumperB_frame" pos="-0.251 0 -0.264" quat="1.32679e-06 0 0 -1">
+                                <inertial pos="-0.251 0 -0.264" quat="1.32679e-06 0 0 -1" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="SurroundingLeftLaser_frame" pos="-0.018 0.0899 -0.334" quat="0.638199 0 0 0.769872">
+                                <inertial pos="-0.018 0.0899 -0.334" quat="0.638199 0 0 0.769872" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="ShovelLaser_frame" pos="0.0562 0 -0.0692" quat="0.984808 0 0.173648 0">
+                                <inertial pos="0.0562 0 -0.0692" quat="0.984808 0 0.173648 0" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="SurroundingRightLaser_device_frame" pos="-0.018 -0.0899 -0.0759" quat="0.696363 0.122788 0.122788 -0.696366">
+                                <inertial pos="-0.018 -0.0899 -0.0759" quat="0.696363 0.122788 0.122788 -0.696366" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="SurroundingLeftLaser_device_frame" pos="-0.018 0.0899 -0.0759" quat="0.696363 -0.122788 0.122788 0.696366">
+                                <inertial pos="-0.018 0.0899 -0.0759" quat="0.696363 -0.122788 0.122788 0.696366" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="SurroundingRightLaser_frame" pos="-0.018 -0.0899 -0.334" quat="0.638199 0 0 -0.769872">
+                                <inertial pos="-0.018 -0.0899 -0.334" quat="0.638199 0 0 -0.769872" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="VerticalRightLaser_frame" pos="0.0562 0 -0.0692" quat="0.984808 0 0.173648 0">
+                                <inertial pos="0.0562 0 -0.0692" quat="0.984808 0 0.173648 0" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="SonarFront_frame" pos="0.0699 0 -0.1023" quat="0.986999 0 -0.160729 0">
+                                <inertial pos="0.0699 0 -0.1023" quat="0.986999 0 -0.160729 0" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="BumperFL_frame" pos="0.129 0.227 -0.264" quat="0.970275 0 0 0.242003">
+                                <inertial pos="0.129 0.227 -0.264" quat="0.970275 0 0 0.242003" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="ImuBaseAccelerometer_frame" pos="0.0147 -0.0017 -0.26319">
+                                <inertial pos="0.0147 -0.0017 -0.26319" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="BumperFR_frame" pos="0.129 -0.227 -0.264" quat="0.970275 0 0 -0.242003">
+                                <inertial pos="0.129 -0.227 -0.264" quat="0.970275 0 0 -0.242003" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="SurroundingFrontLaser_frame" pos="0.0562 0 -0.334">
+                                <inertial pos="0.0562 0 -0.334" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="WheelFL_link" pos="0.09 0.155 -0.264" quat="0.858948 0 0 0.512063">
+                                <inertial pos="0 0 0" quat="0.709877 -0.0645449 -0.0549504 0.699206" mass="1.58028" diaginertia="0.00303231 0.0029985 0.00296489" />
+                                <joint name="WheelFL" pos="0 0 0" axis="1 0 0" />
+                                <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="WheelFL" />
+                                <geom type="mesh" mesh="WheelFL_0.10" />
+                            </body>
+                            <body name="WheelB_link" pos="-0.17 0 -0.264" quat="1.32679e-06 0 0 -1">
+                                <inertial pos="0 0 0" quat="0.709877 -0.0645449 -0.0549504 0.699206" mass="1.58028" diaginertia="0.00303231 0.0029985 0.00296489" />
+                                <joint name="WheelB" pos="0 0 0" axis="1 0 0" />
+                                <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="WheelB" />
+                                <geom type="mesh" mesh="WheelB_0.10" />
+                            </body>
+                            <body name="WheelFR_link" pos="0.09 -0.155 -0.264" quat="0.858948 0 0 -0.512063">
+                                <inertial pos="0 0 0" quat="0.709877 -0.0645449 -0.0549504 0.699206" mass="1.58028" diaginertia="0.00303231 0.0029985 0.00296489" />
+                                <joint name="WheelFR" pos="0 0 0" axis="1 0 0" />
+                                <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="WheelFR" />
+                                <geom type="mesh" mesh="WheelFR_0.10" />
+                            </body>
+                        </body>
+                    </body>
+                </body>
+                <body name="LShoulder" pos="-0.057 0.14974 0.08682">
+                    <inertial pos="0.00018 -0.01856 0.00099" quat="0.50113 0.507712 -0.503058 0.487883" mass="0.3125" diaginertia="0.00039933 0.000361203 0.000137088" />
+                    <joint name="LShoulderPitch" pos="0 0 0" axis="0 1 0" limited="true" range="-2.08567 2.08567" />
+                    <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LShoulderPitch" />
+                    <geom type="mesh" mesh="LShoulderPitch_0.10" />
+                    <body name="LBicep" pos="0 0 0">
+                        <inertial pos="0.08151 0.01284 -0.01017" quat="0.443367 0.532045 0.52943 0.489957" mass="0.50527" diaginertia="0.00126476 0.00116783 0.000488295" />
+                        <joint name="LShoulderRoll" pos="0 0 0" axis="0 0 1" limited="true" range="0.00872665 1.56207" />
+                        <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LShoulderRoll" />
+                        <geom type="mesh" mesh="LShoulderRoll_0.10" />
+                        <body name="LElbow" pos="0.1812 0.015 0.00013" quat="0.996917 0 -0.0784588 0">
+                            <inertial pos="-0.02297 -0.00019 0.00119" quat="0.555765 0.445503 0.48224 0.509998" mass="0.27495" diaginertia="0.000331943 0.000306436 0.000119404" />
+                            <joint name="LElbowYaw" pos="0 0 0" axis="1 0 0" limited="true" range="-2.08567 2.08567" />
+                            <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LElbowYaw" />
+                            <geom type="mesh" mesh="LElbowYaw_0.10" />
+                            <body name="LForeArm" pos="0 0 0">
+                                <inertial pos="0.0593 0.00271 -0.01014" quat="0.737607 0.0159065 0.0171261 0.674826" mass="0.16579" diaginertia="0.0017335 0.00156665 0.000270247" />
+                                <joint name="LElbowRoll" pos="0 0 0" axis="0 0 1" limited="true" range="-1.56207 -0.00872665" />
+                                <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LElbowRoll" />
+                                <geom type="mesh" mesh="LElbowRoll_0.10" />
+                                <body name="l_wrist" pos="0.15 0 0">
+                                    <inertial pos="0.03536 -0.00072 -0.00207" quat="-0.028809 0.708366 -0.056181 0.703015" mass="0.27555" diaginertia="0.000456567 0.00043114 0.000151207" />
+                                    <joint name="LWristYaw" pos="0 0 0" axis="1 0 0" limited="true" range="-1.82387 1.82387" />
+                                    <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LWristYaw" />
+                                    <geom type="mesh" mesh="LWristYaw_0.10" />
+                                    <body name="l_grasp_link" pos="0.065 0 0">
+                                        <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                        <joint name="LGrasp" pos="0 0 0" axis="1 0 0" />
+                                        <body name="l_gripper" pos="0.025 0 0">
+                                            <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                            <joint name="LHand" pos="0 0 0" axis="1 0 0" limited="true" range="0.02 0.98" />
+                                        </body>
+                                    </body>
+                                    <body name="LHandTouchBack_frame" pos="0.0523 0 0.0304" quat="0.500002 -0.499999 -0.500001 -0.499997">
+                                        <inertial pos="0.0523 0 0.0304" quat="0.500002 -0.499999 -0.500001 -0.499997" mass="0" diaginertia="0 0 0" />
+                                    </body>
+                                    <body name="LFinger21_link" pos="0.0873 -0.0073 0.006" quat="0.601288 0.622884 0.334688 -0.372091">
+                                        <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                        <joint name="LFinger21" pos="0 0 0" axis="0 0 1" />
+                                        <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LFinger21" />
+                                        <geom type="mesh" mesh="LFinger21_0.10" />
+                                        <body name="LFinger22_link" pos="0.018 0 0" quat="0.866025 0 0 -0.500001">
+                                            <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                            <joint name="LFinger22" pos="0 0 0" axis="0 0 1" />
+                                            <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LFinger22" />
+                                            <geom type="mesh" mesh="LFinger22_0.10" />
+                                            <body name="LFinger23_link" pos="0.018 0 0" quat="0.866025 0 0 -0.500001">
+                                                <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                                <joint name="LFinger23" pos="0 0 0" axis="0 0 1" />
+                                                <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LFinger23" />
+                                                <geom type="mesh" mesh="LFinger23_0.10" />
+                                            </body>
+                                        </body>
+                                    </body>
+                                    <body name="LFinger11_link" pos="0.0821 -0.0268 0.004" quat="0.551715 0.669554 0.308667 -0.389913">
+                                        <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                        <joint name="LFinger11" pos="0 0 0" axis="0 0 1" />
+                                        <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LFinger11" />
+                                        <geom type="mesh" mesh="LFinger11_0.10" />
+                                        <body name="LFinger12_link" pos="0.018 0 0" quat="0.866025 0 0 -0.500001">
+                                            <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                            <joint name="LFinger12" pos="0 0 0" axis="0 0 1" />
+                                            <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LFinger12" />
+                                            <geom type="mesh" mesh="LFinger12_0.10" />
+                                            <body name="LFinger13_link" pos="0.018 0 0" quat="0.866025 0 0 -0.500001">
+                                                <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                                <joint name="LFinger13" pos="0 0 0" axis="0 0 1" />
+                                                <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LFinger13" />
+                                                <geom type="mesh" mesh="LFinger13_0.10" />
+                                            </body>
+                                        </body>
+                                    </body>
+                                    <body name="LFinger41_link" pos="0.074 0.0309 0" quat="0.67484 0.544826 0.399482 -0.296934">
+                                        <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                        <joint name="LFinger41" pos="0 0 0" axis="0 0 1" />
+                                        <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LFinger41" />
+                                        <geom type="mesh" mesh="LFinger41_0.10" />
+                                        <body name="LFinger42_link" pos="0.018 0 0" quat="0.866025 0 0 -0.500001">
+                                            <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                            <joint name="LFinger42" pos="0 0 0" axis="0 0 1" />
+                                            <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LFinger42" />
+                                            <geom type="mesh" mesh="LFinger42_0.10" />
+                                            <body name="LFinger43_link" pos="0.018 0 0" quat="0.866025 0 0 -0.500001">
+                                                <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                                <joint name="LFinger43" pos="0 0 0" axis="0 0 1" />
+                                                <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LFinger43" />
+                                                <geom type="mesh" mesh="LFinger43_0.10" />
+                                            </body>
+                                        </body>
+                                    </body>
+                                    <body name="LFinger31_link" pos="0.0833 0.0123 0.004" quat="0.638976 0.585343 0.362223 -0.343334">
+                                        <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                        <joint name="LFinger31" pos="0 0 0" axis="0 0 1" />
+                                        <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LFinger31" />
+                                        <geom type="mesh" mesh="LFinger31_0.10" />
+                                        <body name="LFinger32_link" pos="0.018 0 0" quat="0.866025 0 0 -0.500001">
+                                            <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                            <joint name="LFinger32" pos="0 0 0" axis="0 0 1" />
+                                            <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LFinger32" />
+                                            <geom type="mesh" mesh="LFinger32_0.10" />
+                                            <body name="LFinger33_link" pos="0.018 0 0" quat="0.866025 0 0 -0.500001">
+                                                <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                                <joint name="LFinger33" pos="0 0 0" axis="0 0 1" />
+                                                <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LFinger33" />
+                                                <geom type="mesh" mesh="LFinger33_0.10" />
+                                            </body>
+                                        </body>
+                                    </body>
+                                    <body name="LThumb1_link" pos="0.0482 -0.0357 -0.0199" quat="0.448047 -0.80805 -0.0484228 0.379425">
+                                        <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                        <joint name="LThumb1" pos="0 0 0" axis="0 0 1" />
+                                        <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LThumb1" />
+                                        <geom type="mesh" mesh="LThumb1_0.10" />
+                                        <body name="LThumb2_link" pos="0.022 0 0" quat="0.866025 0 0 -0.500001">
+                                            <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                            <joint name="LThumb2" pos="0 0 0" axis="0 0 1" />
+                                            <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="LThumb2" />
+                                            <geom type="mesh" mesh="LThumb2_0.10" />
+                                        </body>
+                                    </body>
+                                </body>
+                            </body>
+                        </body>
+                    </body>
+                </body>
+                <body name="RShoulder" pos="-0.057 -0.14974 0.08682">
+                    <inertial pos="0.00018 0.01856 0.00099" quat="0.507712 0.50113 -0.487883 0.503058" mass="0.3125" diaginertia="0.00039933 0.000361203 0.000137088" />
+                    <joint name="RShoulderPitch" pos="0 0 0" axis="0 1 0" limited="true" range="-2.08567 2.08567" />
+                    <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RShoulderPitch" />
+                    <geom type="mesh" mesh="RShoulderPitch_0.10" />
+                    <body name="RBicep" pos="0 0 0">
+                        <inertial pos="0.08151 -0.01284 -0.01017" quat="0.489957 0.52943 0.532045 0.443367" mass="0.50527" diaginertia="0.00126476 0.00116783 0.000488295" />
+                        <joint name="RShoulderRoll" pos="0 0 0" axis="0 0 1" limited="true" range="-1.56207 -0.00872665" />
+                        <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RShoulderRoll" />
+                        <geom type="mesh" mesh="RShoulderRoll_0.10" />
+                        <body name="RElbow" pos="0.1812 -0.015 0.00013" quat="0.996917 0 -0.0784588 0">
+                            <inertial pos="-0.02297 0.00019 0.00119" quat="0.509998 0.48224 0.445503 0.555765" mass="0.27495" diaginertia="0.000331943 0.000306436 0.000119404" />
+                            <joint name="RElbowYaw" pos="0 0 0" axis="1 0 0" limited="true" range="-2.08567 2.08567" />
+                            <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RElbowYaw" />
+                            <geom type="mesh" mesh="RElbowYaw_0.10" />
+                            <body name="RForeArm" pos="0 0 0">
+                                <inertial pos="0.0593 -0.00271 -0.01014" quat="0.674826 0.0171261 0.0159065 0.737607" mass="0.16579" diaginertia="0.0017335 0.00156665 0.000270247" />
+                                <joint name="RElbowRoll" pos="0 0 0" axis="0 0 1" limited="true" range="0.00872665 1.56207" />
+                                <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RElbowRoll" />
+                                <geom type="mesh" mesh="RElbowRoll_0.10" />
+                                <body name="r_wrist" pos="0.15 0 0">
+                                    <inertial pos="0.03536 0.00072 -0.00207" quat="0.028809 0.708366 0.056181 0.703015" mass="0.27555" diaginertia="0.000456567 0.00043114 0.000151207" />
+                                    <joint name="RWristYaw" pos="0 0 0" axis="1 0 0" limited="true" range="-1.82387 1.82387" />
+                                    <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RWristYaw" />
+                                    <geom type="mesh" mesh="RWristYaw_0.10" />
+                                    <body name="r_grasp_link" pos="0.065 0 0">
+                                        <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                        <joint name="RGrasp" pos="0 0 0" axis="1 0 0" />
+                                        <body name="r_gripper" pos="0.025 0 0">
+                                            <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                            <joint name="RHand" pos="0 0 0" axis="1 0 0" limited="true" range="0.02 0.98" />
+                                        </body>
+                                    </body>
+                                    <body name="RHandTouchBack_frame" pos="0.0523 0 0.0304" quat="0.500002 -0.499999 -0.500001 -0.499997">
+                                        <inertial pos="0.0523 0 0.0304" quat="0.500002 -0.499999 -0.500001 -0.499997" mass="0" diaginertia="0 0 0" />
+                                    </body>
+                                    <body name="RFinger41_link" pos="0.074 -0.0309 0" quat="0.544827 0.674839 0.296935 -0.399482">
+                                        <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                        <joint name="RFinger41" pos="0 0 0" axis="0 0 1" />
+                                        <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RFinger41" />
+                                        <geom type="mesh" mesh="RFinger41_0.10" />
+                                        <body name="RFinger42_link" pos="0.018 0 0" quat="0.866025 0 0 -0.500001">
+                                            <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                            <joint name="RFinger42" pos="0 0 0" axis="0 0 1" />
+                                            <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RFinger42" />
+                                            <geom type="mesh" mesh="RFinger42_0.10" />
+                                            <body name="RFinger43_link" pos="0.018 0 0" quat="0.866025 0 0 -0.500001">
+                                                <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                                <joint name="RFinger43" pos="0 0 0" axis="0 0 1" />
+                                                <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RFinger43" />
+                                                <geom type="mesh" mesh="RFinger43_0.10" />
+                                            </body>
+                                        </body>
+                                    </body>
+                                    <body name="RFinger31_link" pos="0.0833 -0.0123 0.004" quat="0.585344 0.638975 0.343335 -0.362222">
+                                        <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                        <joint name="RFinger31" pos="0 0 0" axis="0 0 1" />
+                                        <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RFinger31" />
+                                        <geom type="mesh" mesh="RFinger31_0.10" />
+                                        <body name="RFinger32_link" pos="0.018 0 0" quat="0.866025 0 0 -0.500001">
+                                            <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                            <joint name="RFinger32" pos="0 0 0" axis="0 0 1" />
+                                            <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RFinger32" />
+                                            <geom type="mesh" mesh="RFinger32_0.10" />
+                                            <body name="RFinger33_link" pos="0.018 0 0" quat="0.866025 0 0 -0.500001">
+                                                <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                                <joint name="RFinger33" pos="0 0 0" axis="0 0 1" />
+                                                <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RFinger33" />
+                                                <geom type="mesh" mesh="RFinger33_0.10" />
+                                            </body>
+                                        </body>
+                                    </body>
+                                    <body name="RFinger21_link" pos="0.0873 0.0073 0.006" quat="0.622882 0.601291 0.372089 -0.334689">
+                                        <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                        <joint name="RFinger21" pos="0 0 0" axis="0 0 1" />
+                                        <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RFinger21" />
+                                        <geom type="mesh" mesh="RFinger21_0.10" />
+                                        <body name="RFinger22_link" pos="0.018 0 0" quat="0.866025 0 0 -0.500001">
+                                            <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                            <joint name="RFinger22" pos="0 0 0" axis="0 0 1" />
+                                            <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RFinger22" />
+                                            <geom type="mesh" mesh="RFinger22_0.10" />
+                                            <body name="RFinger23_link" pos="0.018 0 0" quat="0.866025 0 0 -0.500001">
+                                                <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                                <joint name="RFinger23" pos="0 0 0" axis="0 0 1" />
+                                                <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RFinger23" />
+                                                <geom type="mesh" mesh="RFinger23_0.10" />
+                                            </body>
+                                        </body>
+                                    </body>
+                                    <body name="RFinger11_link" pos="0.0821 0.0268 0.004" quat="0.669555 0.551715 0.389913 -0.308666">
+                                        <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                        <joint name="RFinger11" pos="0 0 0" axis="0 0 1" />
+                                        <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RFinger11" />
+                                        <geom type="mesh" mesh="RFinger11_0.10" />
+                                        <body name="RFinger12_link" pos="0.018 0 0" quat="0.866025 0 0 -0.500001">
+                                            <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                            <joint name="RFinger12" pos="0 0 0" axis="0 0 1" />
+                                            <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RFinger12" />
+                                            <geom type="mesh" mesh="RFinger12_0.10" />
+                                            <body name="RFinger13_link" pos="0.018 0 0" quat="0.866025 0 0 -0.500001">
+                                                <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                                <joint name="RFinger13" pos="0 0 0" axis="0 0 1" />
+                                                <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RFinger13" />
+                                                <geom type="mesh" mesh="RFinger13_0.10" />
+                                            </body>
+                                        </body>
+                                    </body>
+                                    <body name="RThumb1_link" pos="0.0482 0.0357 -0.0199" quat="0.808051 -0.448046 0.379425 -0.0484233">
+                                        <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                        <joint name="RThumb1" pos="0 0 0" axis="0 0 1" />
+                                        <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RThumb1" />
+                                        <geom type="mesh" mesh="RThumb1_0.10" />
+                                        <body name="RThumb2_link" pos="0.022 0 0" quat="0.866025 0 0 -0.500001">
+                                            <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                            <joint name="RThumb2" pos="0 0 0" axis="0 0 1" />
+                                            <geom type="mesh" contype="0" conaffinity="0" group="1" mesh="RThumb2" />
+                                            <geom type="mesh" mesh="RThumb2_0.10" />
+                                        </body>
+                                    </body>
+                                </body>
+                            </body>
+                        </body>
+                    </body>
+                </body>
+                <body name="ImuTorsoAccelerometer_frame" pos="0.00239 -0.03575 0.00626">
+                    <inertial pos="0.00239 -0.03575 0.00626" mass="0" diaginertia="0 0 0" />
+                </body>
+                <body name="ImuTorsoGyrometer_frame" pos="0.00204 -0.03491 -0.00959">
+                    <inertial pos="0.00204 -0.03491 -0.00959" mass="0" diaginertia="0 0 0" />
+                </body>
+                <body name="Tablet_frame" pos="0.0839249 0 0.06251" quat="0.965926 0 -0.258819 0">
+                    <inertial pos="0.0839249 0 0.06251" quat="0.965926 0 -0.258819 0" mass="0" diaginertia="0 0 0" />
+                </body>
+                <body name="ChestButton_frame" pos="0.049871 0.001588 0.055163">
+                    <inertial pos="0.049871 0.001588 0.055163" mass="0" diaginertia="0 0 0" />
+                </body>
+            </body>
+        </body>
+    </worldbody>
+</mujoco>

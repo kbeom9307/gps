@@ -1,0 +1,239 @@
+<mujoco model="JulietteY20MP">
+    <compiler angle="radian" meshdir="meshes_mujoco/" />
+    <size njmax="500" nconmax="100" />
+    <asset>
+        <mesh name="Torso_0.10" file="Torso_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="HeadYaw_0.10" file="HeadYaw_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="HeadPitch_0.10" file="HeadPitch_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="HipRoll_0.10" file="HipRoll_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="HipPitch_0.10" file="HipPitch_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="KneePitch_0.10" file="KneePitch_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="WheelFL_0.10" file="WheelFL_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="WheelB_0.10" file="WheelB_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="WheelFR_0.10" file="WheelFR_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LShoulderPitch_0.10" file="LShoulderPitch_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LShoulderRoll_0.10" file="LShoulderRoll_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LElbowYaw_0.10" file="LElbowYaw_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LElbowRoll_0.10" file="LElbowRoll_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="LWristYaw_0.10" file="LWristYaw_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RShoulderPitch_0.10" file="RShoulderPitch_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RShoulderRoll_0.10" file="RShoulderRoll_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RElbowYaw_0.10" file="RElbowYaw_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RElbowRoll_0.10" file="RElbowRoll_0.10.stl" scale="0.1 0.1 0.1" />
+        <mesh name="RWristYaw_0.10" file="RWristYaw_0.10.stl" scale="0.1 0.1 0.1" />
+    </asset>
+    <worldbody>
+        <body name="base_link" pos="0 0 0">
+            <inertial pos="0 0 0" mass="0" diaginertia="0 0 0" />
+            <body name="torso" pos="0 0 0">
+                <inertial pos="0.00322 0 -0.01029" quat="0.992867 -0.00576461 -0.118623 -0.0105365" mass="3.99533" diaginertia="0.0464867 0.0432726 0.0246751" />
+                <geom type="mesh" mesh="Torso_0.10" />
+                <body name="Neck" pos="-0.038 0 0.1699">
+                    <inertial pos="-0.00207 0 -0.02636" quat="0.704768 0.05316 0.0478511 0.705823" mass="0.27391" diaginertia="0.000493914 0.000346215 0.000212522" />
+                    <joint name="HeadYaw" pos="0 0 0" axis="0 0 1" limited="true" range="-2.08567 2.08567" />
+                    <geom type="mesh" mesh="HeadYaw_0.10" />
+                    <body name="Head" pos="0 0 0">
+                        <inertial pos="0.00312 0 0.11152" quat="0.982446 0.000662891 -0.186542 0.00082431" mass="1.51893" diaginertia="0.00602139 0.0059054 0.00565444" />
+                        <joint name="HeadPitch" pos="0 0 0" axis="0 1 0" limited="true" range="-0.706858 0.637045" />
+                        <geom type="mesh" mesh="HeadPitch_0.10" />
+                        <body name="RSpeaker_frame" pos="0 0 0">
+                            <inertial pos="0 0 0" mass="0" diaginertia="0 0 0" />
+                        </body>
+                        <body name="LSpeaker_frame" pos="0 0 0">
+                            <inertial pos="0 0 0" mass="0" diaginertia="0 0 0" />
+                        </body>
+                        <body name="CameraTop_frame" pos="0.08601 0 0.16284">
+                            <inertial pos="0.08601 0 0.16284" mass="0" diaginertia="0 0 0" />
+                            <body name="CameraTop_optical_frame" pos="0 0 0" quat="0.5 -0.5 0.5 -0.5">
+                                <inertial pos="0 0 0" quat="0.5 -0.5 0.5 -0.5" mass="0" diaginertia="0 0 0" />
+                            </body>
+                        </body>
+                        <body name="CameraDepth_frame" pos="0.05138 0.039 0.1194">
+                            <inertial pos="0.05138 0.039 0.1194" mass="0" diaginertia="0 0 0" />
+                            <body name="CameraDepth_optical_frame" pos="0 0 0" quat="0.5 -0.5 0.5 -0.5">
+                                <inertial pos="0 0 0" quat="0.5 -0.5 0.5 -0.5" mass="0" diaginertia="0 0 0" />
+                            </body>
+                        </body>
+                        <body name="HeadTouchFront_frame" pos="0.028175 0 0.21267" quat="0.994522 0 0.104529 0">
+                            <inertial pos="0.028175 0 0.21267" quat="0.994522 0 0.104529 0" mass="0" diaginertia="0 0 0" />
+                        </body>
+                        <body name="CameraBottom_frame" pos="0.09262 0 0.06177" quat="0.939693 0 0.34202 0">
+                            <inertial pos="0.09262 0 0.06177" quat="0.939693 0 0.34202 0" mass="0" diaginertia="0 0 0" />
+                            <body name="CameraBottom_optical_frame" pos="0 0 0" quat="0.5 -0.5 0.5 -0.5">
+                                <inertial pos="0 0 0" quat="0.5 -0.5 0.5 -0.5" mass="0" diaginertia="0 0 0" />
+                            </body>
+                        </body>
+                        <body name="HeadTouchRear_frame" pos="-0.03376 0 0.21052" quat="0.987688 0 -0.156434 0">
+                            <inertial pos="-0.03376 0 0.21052" quat="0.987688 0 -0.156434 0" mass="0" diaginertia="0 0 0" />
+                        </body>
+                        <body name="HeadTouchMiddle_frame" pos="0.0041 0 0.2159" quat="0.999848 0 -0.0174524 0">
+                            <inertial pos="0.0041 0 0.2159" quat="0.999848 0 -0.0174524 0" mass="0" diaginertia="0 0 0" />
+                        </body>
+                    </body>
+                </body>
+                <body name="Hip" pos="2e-05 0 -0.139">
+                    <inertial pos="0.00032 0 -0.06039" quat="0.705334 0.0422371 -0.0136626 0.707484" mass="1.02338" diaginertia="0.00642235 0.00502525 0.00439715" />
+                    <joint name="HipRoll" pos="0 0 0" axis="1 0 0" limited="true" range="-0.514872 0.514872" />
+                    <geom type="mesh" mesh="HipRoll_0.10" />
+                    <body name="Pelvis" pos="0 0 -0.079">
+                        <inertial pos="0.00237 0 -0.09654" quat="0.999981 -0.00262662 -0.00558246 -0.000130362" mass="2.45917" diaginertia="0.0343535 0.0303126 0.0143742" />
+                        <joint name="HipPitch" pos="0 0 0" axis="0 1 0" limited="true" range="-1.03847 1.03847" />
+                        <geom type="mesh" mesh="HipPitch_0.10" />
+                        <body name="Tibia" pos="0 0 -0.268">
+                            <inertial pos="0.00220451 0 -0.185729" quat="0.999446 0.000674774 -0.0115096 -0.0312135" mass="11.6015" diaginertia="0.129265 0.122814 0.108157" />
+                            <joint name="KneePitch" pos="0 0 0" axis="0 1 0" limited="true" range="-0.514872 0.514872" />
+                            <geom type="mesh" mesh="KneePitch_0.10" />
+                            <body name="base_footprint" pos="0 0 -0.334">
+                                <inertial pos="0 0 -0.334" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="SonarBack_frame" pos="-0.0718 0 -0.0534" quat="1.31858e-06 -0.104528 -1.29649e-07 -0.994522">
+                                <inertial pos="-0.0718 0 -0.0534" quat="1.31858e-06 -0.104528 -1.29649e-07 -0.994522" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="VerticalLeftLaser_frame" pos="0.0562 0 -0.0692" quat="0.984808 0 0.173648 0">
+                                <inertial pos="0.0562 0 -0.0692" quat="0.984808 0 0.173648 0" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="SurroundingFrontLaser_device_frame" pos="0.0562 0 -0.0692" quat="0.984808 0 0.173648 0">
+                                <inertial pos="0.0562 0 -0.0692" quat="0.984808 0 0.173648 0" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="BumperB_frame" pos="-0.251 0 -0.264" quat="1.32679e-06 0 0 -1">
+                                <inertial pos="-0.251 0 -0.264" quat="1.32679e-06 0 0 -1" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="SurroundingLeftLaser_frame" pos="-0.018 0.0899 -0.334" quat="0.638199 0 0 0.769872">
+                                <inertial pos="-0.018 0.0899 -0.334" quat="0.638199 0 0 0.769872" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="ShovelLaser_frame" pos="0.0562 0 -0.0692" quat="0.984808 0 0.173648 0">
+                                <inertial pos="0.0562 0 -0.0692" quat="0.984808 0 0.173648 0" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="SurroundingRightLaser_device_frame" pos="-0.018 -0.0899 -0.0759" quat="0.696363 0.122788 0.122788 -0.696366">
+                                <inertial pos="-0.018 -0.0899 -0.0759" quat="0.696363 0.122788 0.122788 -0.696366" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="SurroundingLeftLaser_device_frame" pos="-0.018 0.0899 -0.0759" quat="0.696363 -0.122788 0.122788 0.696366">
+                                <inertial pos="-0.018 0.0899 -0.0759" quat="0.696363 -0.122788 0.122788 0.696366" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="SurroundingRightLaser_frame" pos="-0.018 -0.0899 -0.334" quat="0.638199 0 0 -0.769872">
+                                <inertial pos="-0.018 -0.0899 -0.334" quat="0.638199 0 0 -0.769872" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="VerticalRightLaser_frame" pos="0.0562 0 -0.0692" quat="0.984808 0 0.173648 0">
+                                <inertial pos="0.0562 0 -0.0692" quat="0.984808 0 0.173648 0" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="SonarFront_frame" pos="0.0699 0 -0.1023" quat="0.986999 0 -0.160729 0">
+                                <inertial pos="0.0699 0 -0.1023" quat="0.986999 0 -0.160729 0" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="BumperFL_frame" pos="0.129 0.227 -0.264" quat="0.970275 0 0 0.242003">
+                                <inertial pos="0.129 0.227 -0.264" quat="0.970275 0 0 0.242003" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="ImuBaseAccelerometer_frame" pos="0.0147 -0.0017 -0.26319">
+                                <inertial pos="0.0147 -0.0017 -0.26319" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="BumperFR_frame" pos="0.129 -0.227 -0.264" quat="0.970275 0 0 -0.242003">
+                                <inertial pos="0.129 -0.227 -0.264" quat="0.970275 0 0 -0.242003" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="SurroundingFrontLaser_frame" pos="0.0562 0 -0.334">
+                                <inertial pos="0.0562 0 -0.334" mass="0" diaginertia="0 0 0" />
+                            </body>
+                            <body name="WheelFL_link" pos="0.09 0.155 -0.264" quat="0.858948 0 0 0.512063">
+                                <inertial pos="0 0 0" quat="0.709877 -0.0645449 -0.0549504 0.699206" mass="1.58028" diaginertia="0.00303231 0.0029985 0.00296489" />
+                                <joint name="WheelFL" pos="0 0 0" axis="1 0 0" />
+                                <geom type="mesh" mesh="WheelFL_0.10" />
+                            </body>
+                            <body name="WheelB_link" pos="-0.17 0 -0.264" quat="1.32679e-06 0 0 -1">
+                                <inertial pos="0 0 0" quat="0.709877 -0.0645449 -0.0549504 0.699206" mass="1.58028" diaginertia="0.00303231 0.0029985 0.00296489" />
+                                <joint name="WheelB" pos="0 0 0" axis="1 0 0" />
+                                <geom type="mesh" mesh="WheelB_0.10" />
+                            </body>
+                            <body name="WheelFR_link" pos="0.09 -0.155 -0.264" quat="0.858948 0 0 -0.512063">
+                                <inertial pos="0 0 0" quat="0.709877 -0.0645449 -0.0549504 0.699206" mass="1.58028" diaginertia="0.00303231 0.0029985 0.00296489" />
+                                <joint name="WheelFR" pos="0 0 0" axis="1 0 0" />
+                                <geom type="mesh" mesh="WheelFR_0.10" />
+                            </body>
+                        </body>
+                    </body>
+                </body>
+                <body name="LShoulder" pos="-0.057 0.14974 0.08682">
+                    <inertial pos="0.00018 -0.01856 0.00099" quat="0.50113 0.507712 -0.503058 0.487883" mass="0.3125" diaginertia="0.00039933 0.000361203 0.000137088" />
+                    <joint name="LShoulderPitch" pos="0 0 0" axis="0 1 0" limited="true" range="-2.08567 2.08567" />
+                    <geom type="mesh" mesh="LShoulderPitch_0.10" />
+                    <body name="LBicep" pos="0 0 0">
+                        <inertial pos="0.08151 0.01284 -0.01017" quat="0.443367 0.532045 0.52943 0.489957" mass="0.50527" diaginertia="0.00126476 0.00116783 0.000488295" />
+                        <joint name="LShoulderRoll" pos="0 0 0" axis="0 0 1" limited="true" range="0.00872665 1.56207" />
+                        <geom type="mesh" mesh="LShoulderRoll_0.10" />
+                        <body name="LElbow" pos="0.1812 0.015 0.00013" quat="0.996917 0 -0.0784588 0">
+                            <inertial pos="-0.02297 -0.00019 0.00119" quat="0.555765 0.445503 0.48224 0.509998" mass="0.27495" diaginertia="0.000331943 0.000306436 0.000119404" />
+                            <joint name="LElbowYaw" pos="0 0 0" axis="1 0 0" limited="true" range="-2.08567 2.08567" />
+                            <geom type="mesh" mesh="LElbowYaw_0.10" />
+                            <body name="LForeArm" pos="0 0 0">
+                                <inertial pos="0.0593 0.00271 -0.01014" quat="0.737607 0.0159065 0.0171261 0.674826" mass="0.16579" diaginertia="0.0017335 0.00156665 0.000270247" />
+                                <joint name="LElbowRoll" pos="0 0 0" axis="0 0 1" limited="true" range="-1.56207 -0.00872665" />
+                                <geom type="mesh" mesh="LElbowRoll_0.10" />
+                                <body name="l_wrist" pos="0.15 0 0">
+                                    <inertial pos="0.03536 -0.00072 -0.00207" quat="-0.028809 0.708366 -0.056181 0.703015" mass="0.27555" diaginertia="0.000456567 0.00043114 0.000151207" />
+                                    <joint name="LWristYaw" pos="0 0 0" axis="1 0 0" limited="true" range="-1.82387 1.82387" />
+                                    <geom type="mesh" mesh="LWristYaw_0.10" />
+                                    <body name="l_grasp_link" pos="0.065 0 0">
+                                        <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                        <joint name="LGrasp" pos="0 0 0" axis="1 0 0" />
+                                        <body name="l_gripper" pos="0.025 0 0">
+                                            <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                            <joint name="LHand" pos="0 0 0" axis="1 0 0" limited="true" range="0.02 0.98" />
+                                        </body>
+                                    </body>
+                                    <body name="LHandTouchBack_frame" pos="0.0523 0 0.0304" quat="0.500002 -0.499999 -0.500001 -0.499997">
+                                        <inertial pos="0.0523 0 0.0304" quat="0.500002 -0.499999 -0.500001 -0.499997" mass="0" diaginertia="0 0 0" />
+                                    </body>
+                                </body>
+                            </body>
+                        </body>
+                    </body>
+                </body>
+                <body name="RShoulder" pos="-0.057 -0.14974 0.08682">
+                    <inertial pos="0.00018 0.01856 0.00099" quat="0.507712 0.50113 -0.487883 0.503058" mass="0.3125" diaginertia="0.00039933 0.000361203 0.000137088" />
+                    <joint name="RShoulderPitch" pos="0 0 0" axis="0 1 0" limited="true" range="-2.08567 2.08567" />
+                    <geom type="mesh" mesh="RShoulderPitch_0.10" />
+                    <body name="RBicep" pos="0 0 0">
+                        <inertial pos="0.08151 -0.01284 -0.01017" quat="0.489957 0.52943 0.532045 0.443367" mass="0.50527" diaginertia="0.00126476 0.00116783 0.000488295" />
+                        <joint name="RShoulderRoll" pos="0 0 0" axis="0 0 1" limited="true" range="-1.56207 -0.00872665" />
+                        <geom type="mesh" mesh="RShoulderRoll_0.10" />
+                        <body name="RElbow" pos="0.1812 -0.015 0.00013" quat="0.996917 0 -0.0784588 0">
+                            <inertial pos="-0.02297 0.00019 0.00119" quat="0.509998 0.48224 0.445503 0.555765" mass="0.27495" diaginertia="0.000331943 0.000306436 0.000119404" />
+                            <joint name="RElbowYaw" pos="0 0 0" axis="1 0 0" limited="true" range="-2.08567 2.08567" />
+                            <geom type="mesh" mesh="RElbowYaw_0.10" />
+                            <body name="RForeArm" pos="0 0 0">
+                                <inertial pos="0.0593 -0.00271 -0.01014" quat="0.674826 0.0171261 0.0159065 0.737607" mass="0.16579" diaginertia="0.0017335 0.00156665 0.000270247" />
+                                <joint name="RElbowRoll" pos="0 0 0" axis="0 0 1" limited="true" range="0.00872665 1.56207" />
+                                <geom type="mesh" mesh="RElbowRoll_0.10" />
+                                <body name="r_wrist" pos="0.15 0 0">
+                                    <inertial pos="0.03536 0.00072 -0.00207" quat="0.028809 0.708366 0.056181 0.703015" mass="0.27555" diaginertia="0.000456567 0.00043114 0.000151207" />
+                                    <joint name="RWristYaw" pos="0 0 0" axis="1 0 0" limited="true" range="-1.82387 1.82387" />
+                                    <geom type="mesh" mesh="RWristYaw_0.10" />
+                                    <body name="r_grasp_link" pos="0.065 0 0">
+                                        <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                        <joint name="RGrasp" pos="0 0 0" axis="1 0 0" />
+                                        <body name="r_gripper" pos="0.025 0 0">
+                                            <inertial pos="0 0 0" mass="2e-06" diaginertia="1.1e-09 1.1e-09 1.1e-09" />
+                                            <joint name="RHand" pos="0 0 0" axis="1 0 0" limited="true" range="0.02 0.98" />
+                                        </body>
+                                    </body>
+                                    <body name="RHandTouchBack_frame" pos="0.0523 0 0.0304" quat="0.500002 -0.499999 -0.500001 -0.499997">
+                                        <inertial pos="0.0523 0 0.0304" quat="0.500002 -0.499999 -0.500001 -0.499997" mass="0" diaginertia="0 0 0" />
+                                    </body>
+                                </body>
+                            </body>
+                        </body>
+                    </body>
+                </body>
+                <body name="ImuTorsoAccelerometer_frame" pos="0.00239 -0.03575 0.00626">
+                    <inertial pos="0.00239 -0.03575 0.00626" mass="0" diaginertia="0 0 0" />
+                </body>
+                <body name="ImuTorsoGyrometer_frame" pos="0.00204 -0.03491 -0.00959">
+                    <inertial pos="0.00204 -0.03491 -0.00959" mass="0" diaginertia="0 0 0" />
+                </body>
+                <body name="Tablet_frame" pos="0.0839249 0 0.06251" quat="0.965926 0 -0.258819 0">
+                    <inertial pos="0.0839249 0 0.06251" quat="0.965926 0 -0.258819 0" mass="0" diaginertia="0 0 0" />
+                </body>
+                <body name="ChestButton_frame" pos="0.049871 0.001588 0.055163">
+                    <inertial pos="0.049871 0.001588 0.055163" mass="0" diaginertia="0 0 0" />
+                </body>
+            </body>
+        </body>
+    </worldbody>
+</mujoco>
